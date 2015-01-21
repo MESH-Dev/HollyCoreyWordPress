@@ -13,7 +13,7 @@
     <div class="container">
       <div id="utility">
         <?php get_template_part( 'partials/social', 'icons' ); ?>
-        <a class="hc-button" href="#">Sign Up For Emails!</a>
+        <a class="hc-button" href="#">Sign Up For Emails!!</a>
       </div>
       <div class="gl-row">
         <div class="gl-col gl-col_7" id="mainNav-left">
