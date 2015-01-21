@@ -1,0 +1,35 @@
+@import url("//hello.myfonts.net/count/2c47c7");
+@font-face {font-family: 'DirectorsGothic201-Semibold';src: url('../fonts/2C47C7_0_0.eot');src: url('../fonts/2C47C7_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2C47C7_0_0.woff') format('woff'),url('../fonts/2C47C7_0_0.ttf') format('truetype');}
+@font-face {font-family: 'Neris-SemiBold';src: url('../fonts/2C47C7_1_0.eot');src: url('../fonts/2C47C7_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2C47C7_1_0.woff') format('woff'),url('../fonts/2C47C7_1_0.ttf') format('truetype');}
+@font-face {font-family: 'Neris-Thin';src: url('../fonts/2C47C7_2_0.eot');src: url('../fonts/2C47C7_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2C47C7_2_0.woff') format('woff'),url('../fonts/2C47C7_2_0.ttf') format('truetype');}
+
+html,body{
+  background:url(../img/bg.jpg) no-repeat #fff;
+  background-size:cover;
+  font-family:'Neris-Thin';
+}
+.login h1 a{
+  background:url('../img/logo.png') no-repeat center center;
+  background-size:contain;
+  height:140px;
+  width:140px;
+}
+
+.wp-core-ui .button-group.button-large .button,
+.wp-core-ui .button.button-large{
+  transition: .2s all;
+  color: #fff;
+  background: #7acbbc;
+  padding: 1px 11px;
+  text-transform: uppercase;
+  font-family: 'DirectorsGothic201-Semibold';
+  letter-spacing: .135em;
+  border: 2px solid #7acbbc;
+  font-size:17px;
+  border-radius:0px;
+}
+.wp-core-ui .button-group.button-large .button:hover,
+.wp-core-ui .button.button-large:hover{
+  color:#7acbbc;
+  background:#fff;
+}
