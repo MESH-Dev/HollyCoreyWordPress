@@ -180,7 +180,7 @@ add_filter( 'menu_order', 'HC_menu_order' );
 function HC_remove_menus(){
   remove_menu_page( 'edit.php' );                   //Posts
   remove_menu_page( 'edit-comments.php' );          //Comments
-  remove_menu_page( 'plugins.php' );                //Plugins
+  //remove_menu_page( 'plugins.php' );                //Plugins
   remove_menu_page( 'tools.php' );                  //Tools
 }
 add_action( 'admin_menu', 'HC_remove_menus' );
