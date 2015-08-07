@@ -11,7 +11,7 @@ if(have_posts()){while(have_posts()){the_post(); ?>
           <div class="calloutBox purple">
             <p><strong>Questions?</strong><br />
             email us anytime!<br />
-            <a href="mailto:info@hollycorey.com">info@holleycorey.com</a></p>
+            <a href="mailto:hello@hollycorey.com">hello@holleycorey.com</a></p>
           </div>
         </div>
       </div>

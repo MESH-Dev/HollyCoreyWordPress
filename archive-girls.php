@@ -43,17 +43,20 @@ global $glacier; ?>
           } ?>
         </div>
       </div>
-      <div class="gl-col gl-col_8">
-        <h4 class="green">Videos</h4>
-        <div class="gl-row">
-          <?php $videos = get_field('videos');
-          foreach($videos as $video){
-            echo '<div class="gl-col gl-col_8">
-                    '.$video['video'].'
-                  </div>';
-          } ?>
+
+      <?php if(get_field('videos')) { ?>
+        <div class="gl-col gl-col_8">
+          <h4 class="green">Videos</h4>
+          <div class="gl-row">
+            <?php $videos = get_field('videos');
+            foreach($videos as $video){
+              echo '<div class="gl-col gl-col_8">
+                      '.$video['video'].'
+                    </div>';
+            } ?>
+          </div>
         </div>
-      </div>
+      <?php } ?>
 
     </div>
   </div>

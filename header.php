@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=960px, initial-scale=1">
     <title><?php wp_title(); ?></title>
+
+    <link rel="icon" type="image/png" href="//cdn.shopify.com/s/files/1/0867/4198/files/logo-favicon_2048x2048.png?1341806573592172459" />
+
     <?php wp_head(); ?>
     <!--[if lt IE 9]>
       <script src="<?php get_template_directory_uri(); ?>/assets/libs/html5shiv.min.js"></script>
@@ -13,7 +17,7 @@
     <div class="container">
       <div id="utility">
         <?php get_template_part( 'partials/social', 'icons' ); ?>
-        <a class="hc-button" href="#">Sign Up For Emails!!</a>
+        <a class="hc-button" href="http://eepurl.com/bsIco5" target="_blank">Sign Up For Emails!!</a>
       </div>
       <div class="gl-row">
         <div class="gl-col gl-col_7" id="mainNav-left">

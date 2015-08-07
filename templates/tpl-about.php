@@ -34,7 +34,15 @@ global $glacier; ?>
         $height = $instapost->images->standard_resolution->height;
         $width  = $instapost->images->standard_resolution->width;
         $link   = $instapost->link;
-        $caption= $instapost->caption->text;
+
+
+
+        if (empty($instapost->caption->text)) {
+          $caption = "";
+        } else {
+          $caption= $instapost->caption->text;
+        }
+
         $color  = $glacier->cycle('green','yellow','pink','purple','grey');
         echo "<div class='gl-col gl-col_4 instapost'>
                 <a href='$link'>

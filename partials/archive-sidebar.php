@@ -1,6 +1,6 @@
 <?php $args = array(
   'post_type'      => $postType->name,
-  'posts_per_page' => 5
+  'posts_per_page' => -1
 );
 $posts = get_posts($args);
 echo "<ul id='archive-sidebar'>";

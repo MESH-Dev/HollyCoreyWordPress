@@ -22,8 +22,7 @@ if(have_posts()){while(have_posts()){the_post(); ?>
           	'link_before'     => '',
           	'link_after'      => '',
           	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-          	'depth'           => 0,
-          	'walker'          => new sidebar_walker()
+          	'depth'           => 0
           ); wp_nav_menu( $defaults ); ?>
       </div>
       <?php $sidebar = get_field('sidebar');

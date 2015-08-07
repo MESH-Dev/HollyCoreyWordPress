@@ -26,11 +26,11 @@ add_action( 'wp_enqueue_scripts', 'HC_scripts' );
 add_action( 'init', 'HC_cpt' );
 function HC_cpt() {
 	$labels = array(
-		'name'               => _x( 'Press'),
-		'singular_name'      => _x( 'Press'),
-		'menu_name'          => _x( 'Press'),
-		'name_admin_bar'     => _x( 'Press'),
-		'add_new'            => _x( 'Add New'),
+		'name'               => __( 'Press'),
+		'singular_name'      => __( 'Press'),
+		'menu_name'          => __( 'Press'),
+		'name_admin_bar'     => __( 'Press'),
+		'add_new'            => __( 'Add New'),
 		'add_new_item'       => __( 'Add New Press Article'),
 		'new_item'           => __( 'New Press Article'),
 		'edit_item'          => __( 'Edit Press Article'),
@@ -58,11 +58,11 @@ function HC_cpt() {
 	); register_post_type( 'press', $args );
 
 	$labels = array(
-		'name'               => _x( 'Girls'),
-		'singular_name'      => _x( 'Girl'),
-		'menu_name'          => _x( 'Girls'),
-		'name_admin_bar'     => _x( 'Girls'),
-		'add_new'            => _x( 'Add New'),
+		'name'               => __( 'Girls'),
+		'singular_name'      => __( 'Girl'),
+		'menu_name'          => __( 'Girls'),
+		'name_admin_bar'     => __( 'Girls'),
+		'add_new'            => __( 'Add New'),
 		'add_new_item'       => __( 'Add New Girl'),
 		'new_item'           => __( 'New Girl'),
 		'edit_item'          => __( 'Edit Girl'),
@@ -119,40 +119,40 @@ function HC_get_right_nav(){
 }
 
 // Sidebar Nav Walker
-class sidebar_walker extends Walker_Nav_Menu{
-  function start_el(&$output, $item, $depth, $args){
-		global $wp_query;
-		global $glacier;
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-		$class_names = $value = '';
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		if($depth != 0){
-			$color = $glacier->cycle('green','yellow','pink','purple','grey');
-		}else{
-			$color = '';
-		}
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-		$class_names = ' class="'. esc_attr( $class_names ) .' '.$color .' "';
-		$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-		$prepend = '<strong>';
-		$append = '</strong>';
-		$description  = ! empty( $item->description ) ? '<span>'.esc_attr( $item->description ).'</span>' : '';
-		if($depth != 0){
-		  $description = $append = $prepend = "";
-		}
-		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
-		$item_output .= $args->link_before .$prepend.apply_filters( 'the_title', $item->title, $item->ID ).$append;
-		$item_output .= $description.$args->link_after;
-		$item_output .= '</a>';
-		$item_output .= $args->after;
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-  }
-}
+// class sidebar_walker extends Walker_Nav_Menu{
+//   function start_el(&$output, $item, $depth, $args){
+// 		global $wp_query;
+// 		global $glacier;
+// 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+// 		$class_names = $value = '';
+// 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+// 		if($depth != 0){
+// 			$color = $glacier->cycle('green','yellow','pink','purple','grey');
+// 		}else{
+// 			$color = '';
+// 		}
+// 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+// 		$class_names = ' class="'. esc_attr( $class_names ) .' '.$color .' "';
+// 		$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+// 		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+// 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+// 		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+// 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+// 		$prepend = '<strong>';
+// 		$append = '</strong>';
+// 		$description  = ! empty( $item->description ) ? '<span>'.esc_attr( $item->description ).'</span>' : '';
+// 		if($depth != 0){
+// 		  $description = $append = $prepend = "";
+// 		}
+// 		$item_output = $args->before;
+// 		$item_output .= '<a'. $attributes .'>';
+// 		$item_output .= $args->link_before .$prepend.apply_filters( 'the_title', $item->title, $item->ID ).$append;
+// 		$item_output .= $description.$args->link_after;
+// 		$item_output .= '</a>';
+// 		$item_output .= $args->after;
+// 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+//   }
+// }
 
 // Menu order
 function HC_menu_order() {
